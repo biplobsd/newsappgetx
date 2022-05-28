@@ -21,6 +21,25 @@ class HttpServiceImpl implements HttpService {
     return response;
   }
 
+  initialzeInterceptiors() {
+    _dio.interceptors.add(
+      InterceptorsWrapper(onError: (e, handler) {
+        if (kDebugMode) {
+          print(e.message);
+        }
+      }, onRequest: (request, handler) {
+        if (kDebugMode) {
+          print('${request.method} | ${request.path}');
+        }
+      }, onResponse: (response, handler) {
+        if (kDebugMode) {
+          print(
+              '${response.statusCode} | ${response.statusMessage} | ${response.data}');
+        }
+      }),
+    );
+  }
+
   @override
   void init() {
     _dio = Dio(
