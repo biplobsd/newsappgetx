@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:newsappgetx/news_headline/binding/news_heading_binding.dart';
 import 'package:newsappgetx/news_headline/view/news_headline_view.dart';
+import 'package:newsappgetx/search_news/binding/search_news_binding.dart';
 import 'package:newsappgetx/search_news/view/search_news_view.dart';
 
 void main() {
@@ -21,10 +23,12 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: NewsHeadlineView.path,
           page: () => const NewsHeadlineView(),
+          binding: NewsHeadlineBinding(),
         ),
         GetPage(
           name: SearchNewsView.path,
           page: () => const SearchNewsView(),
+          binding: SearchNewsBinding(),
         ),
       ],
       initialRoute: NewsHeadlineView.path,
