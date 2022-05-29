@@ -5,6 +5,7 @@ import 'package:newsappgetx/core/widgets/drawer.dart';
 
 class NewsHeadlineView extends StatelessWidget {
   const NewsHeadlineView({Key? key}) : super(key: key);
+  static String path = '/news_headline';
 
   @override
   Widget build(BuildContext context) {

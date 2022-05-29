@@ -5,6 +5,7 @@ import 'package:newsappgetx/core/widgets/drawer.dart';
 
 class SearchNewsView extends StatelessWidget {
   const SearchNewsView({Key? key}) : super(key: key);
+  static String path = '/search_news';
 
   @override
   Widget build(BuildContext context) {

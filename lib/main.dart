@@ -19,15 +19,15 @@ class MyApp extends StatelessWidget {
       ),
       getPages: [
         GetPage(
-          name: '/news_headline',
+          name: NewsHeadlineView.path,
           page: () => const NewsHeadlineView(),
         ),
         GetPage(
-          name: '/search_news',
+          name: SearchNewsView.path,
           page: () => const SearchNewsView(),
         ),
       ],
-      initialRoute: '/news_headline',
+      initialRoute: NewsHeadlineView.path,
     );
   }
 }
