@@ -9,6 +9,8 @@ This project is for learning Getx packages how works. I followed EasyApproach Yo
 |:-:|
 | [<img src="https://camo.githubusercontent.com/4b2feb770224e9bcee92a68f070de64814801fbe4a61694e77c98ceb2315b425/68747470733a2f2f7777772e6c6976656e657474762e746f2f696d672f6c616e64696e672d706167652d312f676f6f676c652d706c61792e706e67" height="75">](http://github.com/biplobsd/newsappgetx/releases/latest/download/app-release.apk) |
 
+## Api
+`` https://newsapi.org/ ``
 
 ## Getting Started
 
