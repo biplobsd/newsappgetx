@@ -1,6 +1,14 @@
 # newsappgetx
 
-A new Flutter project.
+This project is for learning Getx packages how works. I followed EasyApproach Youtube channel Getx video tutorial to make this app. You can find on here  https://youtu.be/tNGfVp4KY2g 
+
+## Preview
+![newsappgetx-preview2](https://user-images.githubusercontent.com/43641536/170869429-6b1d7e9c-4b54-44b4-a1c4-b75c92350212.gif)
+
+| Release apk |
+|:-:|
+| [<img src="https://camo.githubusercontent.com/4b2feb770224e9bcee92a68f070de64814801fbe4a61694e77c98ceb2315b425/68747470733a2f2f7777772e6c6976656e657474762e746f2f696d672f6c616e64696e672d706167652d312f676f6f676c652d706c61792e706e67" height="75">](http://github.com/biplobsd/newsappgetx/releases/latest/download/app-release.apk) |
+
 
 ## Getting Started
 
