@@ -18,7 +18,11 @@ class NewsRepoImpl implements NewsRepo {
     try {
       final response =
           await _httpService.getRequest('/v2/top-headlines?country=us');
+      // if (kDebugMode) {
+      //   print(response.data);
+      // }
       final parseResponse = NewsResponse.fromJson(response.data);
+
       return parseResponse.articles;
     } on Exception catch (e) {
       if (kDebugMode) {

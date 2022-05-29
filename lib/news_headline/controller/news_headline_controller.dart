@@ -17,7 +17,7 @@ class NewsHeadLineController extends GetxController {
   loadNewsHeadline() async {
     showLoading();
 
-    final results = await _newsRepo.getNewsHeadline();
+    List<Article> results = await _newsRepo.getNewsHeadline();
     hideLoading();
 
     if (results != null) {
