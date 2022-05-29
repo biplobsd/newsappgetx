@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: SearchNewsView.path,
-          page: () => const SearchNewsView(),
+          page: () => SearchNewsView(),
           binding: SearchNewsBinding(),
         ),
       ],

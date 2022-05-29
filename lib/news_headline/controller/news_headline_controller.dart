@@ -1,12 +1,14 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
+
 import 'package:newsappgetx/core/model/article.dart';
 import 'package:newsappgetx/core/repository/news_repo_impl.dart';
 import 'package:newsappgetx/core/repository/news_repository.dart';
 
 class NewsHeadLineController extends GetxController {
   late NewsRepo _newsRepo;
-  late RxList<Article> articles;
+  late RxList<Article> articles = RxList();
   RxBool isLoading = false.obs;
 
   NewsHeadLineController() {
@@ -17,7 +19,7 @@ class NewsHeadLineController extends GetxController {
   loadNewsHeadline() async {
     showLoading();
 
-    List<Article> results = await _newsRepo.getNewsHeadline();
+    List<Article>? results = await _newsRepo.getNewsHeadline();
     hideLoading();
 
     if (results != null) {

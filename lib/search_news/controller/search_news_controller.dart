@@ -8,7 +8,7 @@ class SearchNewsController extends GetxController {
   late NewsRepo _newsRepo;
   late RxList<Article> articles;
   RxBool isLoading = false.obs;
-  bool isInitialArticles = false;
+  RxBool isInitialArticles = false.obs;
 
   SearchNewsController() {
     _newsRepo = Get.find<NewsRepoImpl>();
@@ -17,12 +17,12 @@ class SearchNewsController extends GetxController {
   void searchNews(String query) async {
     showLoading();
 
-    List<Article> results = await _newsRepo.getSearchNews(query);
+    List<Article>? results = await _newsRepo.getSearchNews(query);
     hideLoading();
 
     if (results != null) {
       articles = results.obs;
-      isInitialArticles = true;
+      isInitialArticles = true.obs;
     } else {
       if (kDebugMode) {
         print('No data recieved');

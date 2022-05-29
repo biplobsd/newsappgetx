@@ -21,7 +21,9 @@ class NewsShowWidget extends StatelessWidget {
       itemBuilder: (context, index) => Column(
         children: [
           if (articles[index].urlToImage != null)
-            Image.network(articles[index].urlToImage as String),
+            Image.network(
+              articles[index].urlToImage as String,
+            ),
           const SizedBox(
             height: 5,
           ),

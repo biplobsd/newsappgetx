@@ -5,13 +5,13 @@ import 'package:newsappgetx/core/widgets/news_show.dart';
 import 'package:newsappgetx/search_news/controller/search_news_controller.dart';
 
 class SearchNewsView extends StatelessWidget {
-  const SearchNewsView({Key? key}) : super(key: key);
+  SearchNewsView({Key? key}) : super(key: key);
   static String path = '/search_news';
+  final SearchNewsController searchNewsController =
+      Get.find<SearchNewsController>();
 
   @override
   Widget build(BuildContext context) {
-    final SearchNewsController searchNewsController =
-        Get.find<SearchNewsController>();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Search News'),
@@ -33,7 +33,7 @@ class SearchNewsView extends StatelessWidget {
             Obx(
               () => searchNewsController.isLoading.isTrue
                   ? const CircularProgressIndicator()
-                  : searchNewsController.isInitialArticles
+                  : searchNewsController.isInitialArticles.isTrue
                       ? Expanded(
                           child: NewsShowWidget(
                             articles: searchNewsController.articles,
